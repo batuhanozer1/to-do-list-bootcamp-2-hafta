@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Bootcamp Todo List</title>
+</head>
+<body>
+    <div class="container">
+
+        <form id="todoform" >
+            <h1>Todo List</h1>
+            <div class="add-todo">
+                <input type="text" id="baslik" placeholder="Başlık Giriniz">
+                <textarea  id="aciklama" placeholder="Görev açıklaması giriniz."></textarea>
+            </div>
+            <div class="oncelik">
+                <h3 >Öncelik Seviyesi</h3>
+                <div class="oncelik-secenekleri">
+                    <div class="oncelik-secenegi">
+                        <input type="radio" id="dusuk" name="oncelikler" value="dusuk" >
+                        <label for="dusuk"><i class="fa fa-flag" aria-hidden="true"></i>
+                             Düşük</label>
+                    </div>
+                    <div class="oncelik-secenegi">
+                        <input type="radio" id="orta" name="oncelikler" value="orta" >
+                        <label for="orta"><i class="fa fa-flag" aria-hidden="true"></i>
+                             Orta</label>
+                    </div>
+                    <div class="oncelik-secenegi">
+                        <input type="radio" id="yuksek" name="oncelikler" value="yuksek" >
+                        <label for="yuksek"><i class="fa fa-flag" aria-hidden="true"></i>
+                             Yüksek</label>
+                    </div>
+                </div>
+                <button type="submit" class="ekle">Görev Ekle</button>
+            </div>
+        </form>
+        <div class="filitreleme">
+            <button class="filtre" onclick="filtrelemeYap('tumu', event)" class="active">Tümü</button>
+            <button  class="filtre" onclick="filtrelemeYap('aktif', event)">Aktif</button>
+            <button  class="filtre" onclick="filtrelemeYap('tamamlanan', event)">Tamamlanan</button>
+            <button onclick="siralamaYap()" class="siralama">
+                <i class="fa fa-sort-amount-asc"></i>
+                Önceliğe Göre Sırala
+            </button>
+        </div>
+        <div class="list">
+            
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">© 2025 2.Hafta Bootcamp To Do List Uygulaması.</p>
+            <div class="social-links">
+                <a href="https://github.com/batuhanozer1" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/batuhanzer/" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
